@@ -1,0 +1,5 @@
+venv/
+data/raw/
+data/fact.pkl
+data/olist.db
+__pycache__/
