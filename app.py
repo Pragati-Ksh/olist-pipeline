@@ -12,15 +12,15 @@ st.title("Olist E-commerce Dashboard")
 monthly = q("mart_monthly").sort_values("order_month")
 cat = q("mart_category")
 state = q("mart_state")
+overall = q("mart_overall")
 
 c1, c2, c3 = st.columns(3)
 c1.metric("Total revenue", f"{monthly.revenue.sum():,.0f}")
 c2.metric("Orders", f"{monthly.orders.sum():,}")
-c3.metric("Avg % late (across states)", f"{state.pct_late.mean():.1f}%")
+c3.metric("Late deliveries (overall)", f"{overall.pct_late[0]:.1f}%")
 
-st.plotly_chart(px.line(monthly, x="order_month", y="revenue", title="Monthly revenue"),
-                width="stretch")
-
+line = px.line(monthly, x="order_month", y="revenue", title="Monthly revenue")
+st.plotly_chart(line, width="stretch")
 
 left, right = st.columns(2)
 
