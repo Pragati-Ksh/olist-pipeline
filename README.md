@@ -2,7 +2,7 @@
 
 An end-to-end analytics project on the Olist Brazilian e-commerce dataset (Kaggle): raw CSVs are cleaned with Python, loaded into a SQL database, summarised with SQL, and shown in an interactive Streamlit dashboard.
 
-**Live dashboard:** (link coming soon)
+**Live dashboard:** (https://olist-pipeline-db.streamlit.app)
 
 ## Pipeline
 
